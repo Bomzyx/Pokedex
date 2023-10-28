@@ -30,8 +30,8 @@ class _HomepageState extends State<Homepage> {
               List<Widget> pokemon_boxes = [];
               for (int i = 0; i < x!.length; i++) {
                 Pokemon pokemon = x[i];
-                pokemon_boxes
-                    .add(PokemonBox(name: pokemon.name, url: pokemon.url));
+                pokemon_boxes.add(PokemonBox(
+                    id: pokemon.id, name: pokemon.name, url: pokemon.url));
               }
               return GridView.count(crossAxisCount: 2, children: pokemon_boxes);
             }

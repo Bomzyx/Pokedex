@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 class PokemonCard extends StatelessWidget {
-  const PokemonCard({super.key, required this.name, required this.url});
+  const PokemonCard(
+      {super.key, required this.id, required this.name, required this.url});
 
   final String name;
   final String url;
+  final int id;
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +25,7 @@ class PokemonCard extends StatelessWidget {
           "${name[0].toUpperCase()}${name.substring(1)}",
           style: const TextStyle(fontSize: 25, color: Colors.black),
         ),
+        Text("${id}")
       ],
     );
   }

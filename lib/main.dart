@@ -1,4 +1,5 @@
 import 'package:basic_flutter/pages/homepage.dart';
+import 'package:basic_flutter/pages/pokemon_detail.dart';
 import 'package:basic_flutter/widgets/pokemon_box.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,11 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: "Api",
       theme: ThemeData(primarySwatch: Colors.red),
-      home: Homepage(),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => const Homepage(),
+        "/details": (context) => const PokemonDetailPage(),
+      },
     );
   }
 }
